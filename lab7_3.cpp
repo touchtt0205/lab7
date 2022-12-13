@@ -1,6 +1,21 @@
 #include<iostream>
 
 using namespace std;
+int adiff(int x,int y){
+    int z;
+    int A =x-360;
+    int B =y-360;
+    
+    if(x>y){
+      z = (A-B)%360;
+    }else{
+      z = (B-A)%360;
+    }
+    if(z>180){
+        z = z-360;
+    }
+    return abs(z);
+}
 
 
 int main(){
